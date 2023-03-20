@@ -8,7 +8,9 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import { connection } from "./config/db.js";
-import authRoutes from "./routes/auth.js"
+import authRoutes from "./routes/auth.js";
+import usersRoutes from "./routes/users.js";
+import postRoutes from "./routes/posts.js"
 
 // Configuration
 const __filename = fileURLToPath(import.meta.url)
@@ -39,7 +41,8 @@ app.post('/auth/register', upload.single("picture"), register);
 
 // routes
 app.use("/auth", authRoutes)
-
+app.use("/users", usersRoutes)
+app.use("/posts", postRoutes)
 //  Mongoose setup
 const port = process.env.port || 8080;
 app.listen(port, async () => {
