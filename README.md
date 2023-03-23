@@ -4,7 +4,7 @@ FriendCircle is a social media app that allows you to connect with friends and s
 ## 🔗 Links
 netlify link -https://client-xi-cyan.vercel.app
 
-github - 
+github - https://github.com/Rati3010/social_media.git
   
 ### Functionalities are:
 
